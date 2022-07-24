@@ -1,7 +1,22 @@
+# Copyright 2022 Georg Kollegger (CoderTheDuggy/TheDuggy)
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import PIL.Image
 import os
 import numpy
 import sys
+import colorama
 
 
 def logOK(msg):
@@ -49,11 +64,34 @@ def getColorChar(rgbAverage):
         return '#'
 
 
+colorama.init()
+background = '\u001b[41m'
+background2 = '\u001b[104m'
+blue = '\033[34m'
+red = '\033[31m'
+reset = '\033[0m'
+
+line1 = ' ____________                               _                   ____________    _'
+line2 = '|_' + background + '             ' + reset + '                          __| ' + background + '  ' + reset + '                | ' + background2 + '             ' + reset + ' | ' + background2 + '  ' + reset
+line3 = '     | ' + background + '   ' + reset + '                              |_' + background + '        ' + reset + '             | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset
+line4 = '     | ' + background + '   ' + reset + '      ___________   _______      | ' + background + '  ' + reset + '   _______' + reset + '      | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '____   _______   _ 	      _______'
+line5 = '     | ' + background + '   ' + reset + '     | ' + background + '            ' + reset + '| ' + background + '        ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '        ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '        ' + reset + '|_' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '____  | ' + background2 + '        ' + reset
+line6 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + ' _____| ' + background2 + '  ' + reset + '| ' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '____'
+line7 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + '| ' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '      |_' + background2 + '        ' + reset
+line8 = ' ____| ' + background + '   ' + reset + '___  | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '________   | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset + '__| ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset + '       _____| ' + background2 + '  ' + reset
+line9 = '|_' + background + '             ' + reset + '|_' + background + '  ' + reset + ' |_' + background + '  ' + reset + ' |_' + background + '  ' + reset + '|_' + background + '        ' + reset + '    |_' + background + '  ' + reset + '  |_' + background + '        ' + reset + '    |_' + background2 + '             ' + reset + ' |_' + background2 + '  ' + reset + '  |_' + background2 + '  ' + reset + '|_' + background2 + '        ' + reset + '|_' + background2 + '  ' + reset + '      |_' + background2 + '        ' + reset
+line10 = '                                   | ' + background + '  ' + reset
+line11 = '                              _____| ' + background + '  ' + reset
+line12 = '                             |_' + background + '        ' + reset
+
+print(
+    line1 + '\n' + line2 + '\n' + line3 + '\n' + line4 + '\n' + line5 + '\n' + line6 + '\n' + line7 + '\n' + line8 + '\n' + line9 + '\n' + line10 + '\n' + line11 + '\n' + line12 + "\n" + " " * 56 + red + "v1.0" + '\n' + " " * 37 + blue + "(C) Georg Kollegger (CoderTheDuggy/TheDuggy)\n")
+
 createFile = True
 if len(sys.argv) > 1:
     if sys.argv[1] == "--no-file":
         createFile = False
-        logWARNING("Save result to file disabled with arg --no-file!")
+        logWARNING("Save result to file has been disabled with arg --no-file!")
     else:
         logWARNING("The command line argument " + sys.argv[1] + " is unknown and skipped!" + (
             "(Along with " + str(len(sys.argv) - 2) + " other argument(s)!" if len(sys.argv) > 3 else ""))
@@ -85,7 +123,7 @@ if os.path.exists(filePath):
                 image.height * (image.width / width) if width > image.width else image.height / (image.width / width))
         elif height != 0 and width == 0:
             resultWidth = round(image.width * (image.height / height) if height > image.height else image.width / (
-                        image.height / height))
+                    image.height / height))
         elif height == 0 and width == 0:
             logFATAL("Either height or width must be greater than 0!")
             exit(0)
@@ -96,7 +134,7 @@ if os.path.exists(filePath):
                 logFATAL("The offset must be numeric!")
                 exit(0)
             else:
-                offset = " "*int(offset)
+                offset = " " * int(offset)
 
         logOK("Creating text of image with dimension (HxW) " + str(resultHeight) + "x" + str(resultWidth) + "!")
 
@@ -113,7 +151,7 @@ if os.path.exists(filePath):
                     if 100 <= resizedImage.height < 200 or 100 <= resizedImage.width < 200:
                         offset = " "
                     elif resizedImage.height >= 200 or resizedImage.width >= 200:
-                        offset = " "*round(resizedImage.height / 2 / 100)
+                        offset = " " * round(resizedImage.height / 2 / 100)
                 print(colorChar + offset, end="")
                 result = result + colorChar + offset
             print("")
@@ -128,4 +166,4 @@ if os.path.exists(filePath):
     else:
         logFATAL("File " + filePath + " isn't a file!")
 else:
-    logFATAL("File " + filePath + "doesn't exist!")
+    logFATAL("File " + filePath + " doesn't exist!")
