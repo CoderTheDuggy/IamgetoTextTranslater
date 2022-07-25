@@ -5,12 +5,12 @@ ImgToChars is a small python-script, whith which you can display an image as tex
 
 
 ### Configuration
-- By default, ImgToChars creates a file with the result. You can diable it with the argument`--no-file`
-- The default ouput-location of the output-file is the location of the script. If you want you can change the with the argument   
-`--custom-output-file` followed by the costum ouput-dir!
+- By default, ImgToChars creates a file with the result. You can disable it with the argument`--no-file`
+- The default output-location of the output-file is the location of the script. If you want you can change the with the argument   
+`--custom-output-file` followed by the custom output-dir!
 
 ### Dependencies
-ImgToChars requeries the following dependencies:
+ImgToChars requires the following dependencies:
 
 - colorama
 - numpy
@@ -35,4 +35,4 @@ First, you must enter the path to the image
 Than you can enter the width to resize to or nothing to calculate it from the height.
 After that you can enter the height to resize to or nothing to calculate it from the width.
 If you leave both width and height empty, it uses the original width and height.  
-If it hasn't been disabled, there appears a output file in the dir of the script or, if set, in the custom-location!
+If it hasn't been disabled, there appears an output file in the dir of the script or, if set, in the custom-location!
