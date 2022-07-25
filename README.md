@@ -1,9 +1,6 @@
 # ImgToChars
 ImgToChars is a small python-script, whith which you can display an image as text!
 
-![Normal image](/assets/pythonLogo.png) -----> ![Chars screenshot](/assets/charsScreenshot.png)
-
-
 ### Configuration
 - By default, ImgToChars creates a file with the result. You can disable it with the argument`--no-file`
 - The default output-location of the output-file is the location of the script. If you want you can change the with the argument   
