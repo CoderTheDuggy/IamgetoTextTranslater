@@ -144,30 +144,31 @@ def main():
             offset = input('')
             if offset:
                 if not str(offset).isnumeric():
-                    logFATAL("The offset must be numeric!", False)
-                    exit(0)
+                    if not offset == 'disabled':
+                        logFATAL("The offset must be numeric!", False)
+                        exit(0)
                 else:
                     offset = " " * int(offset)
 
-            logOK("Creating text of image with dimension (HxW) " + str(resultHeight) + "x" + str(resultWidth) + "!",
-                  False)
-
             resizedImage = image.resize((resultWidth, resultHeight))
+
+            if not offset:
+                if 100 <= resizedImage.height <= 200 or 100 <= resizedImage.width <= 200:
+                    offset = " "
+                elif resizedImage.height > 200 or resizedImage.width > 200:
+                    offset = " " * round(resizedImage.height / 2 / 100)
+            if offset == 'disabled':
+                offset = ''
 
             pixels = resizedImage.load()
             resultFileName = "result-" + os.path.basename(filePath) + ".txt"
             file = open(('./' if customPath == '' else customPath) + resultFileName, "wb")
-
+            logOK("Creating chars of image " + file.name + 'with height=' + str(resizedImage.height) + ', width=' + str(resizedImage.width) + ' and ' + ('no offset!' if offset == '' else ' offset=' + offset + '!'), False)
             for y in range(0, resizedImage.height):
                 for x in range(0, resizedImage.width):
                     rgb = numpy.array(pixels[x, y])
                     rgbAverage = round((rgb[0] + rgb[1] + rgb[2]) / 3)
                     colorChar = getColorChar(rgbAverage)
-                    if not offset:
-                        if 100 <= resizedImage.height < 200 or 100 <= resizedImage.width < 200:
-                            offset = " "
-                        elif resizedImage.height >= 200 or resizedImage.width >= 200:
-                            offset = " " * round(resizedImage.height / 2 / 100)
                     print(colorChar + offset, end="")
                     if createFile:
                         file.write((colorChar + offset).encode('utf8'))
