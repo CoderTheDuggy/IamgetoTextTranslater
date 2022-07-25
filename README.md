@@ -32,7 +32,7 @@ Execute the script:
 python imgToChars.py
 ```
 First, you must enter the path to the image
-Than you **can** enter the width to resize to or nothing to calculate it from the height.
-After that you **can** enter the height to resize to or nothing to calculate it from the width.
+Than you **can** enter the width to resize to or nothing to calculate it from the height.  
+After that you **can** enter the height to resize to or nothing to calculate it from the width.  
 If you leave both width and height empty, it uses the **original** width and height.  
-If it hasn't been disabled, there appears a output file in the dir of the script or, if set, in the custom-location!
+If it hasn't been disabled, there appears a output file in the dir of the script or, if set, in the custom-location!  
