@@ -125,8 +125,8 @@ if os.path.exists(filePath):
             resultWidth = round(image.width * (image.height / height) if height > image.height else image.width / (
                     image.height / height))
         elif height == 0 and width == 0:
-            logFATAL("Either height or width must be greater than 0!")
-            exit(0)
+            resultWidth = image.width
+            resultHeight = image.height
 
         offset = input("\033[92m[+] Enter a offset for the text (or nothing to calculate the default offset):\033[0m ")
         if offset:
@@ -138,9 +138,12 @@ if os.path.exists(filePath):
 
         logOK("Creating text of image with dimension (HxW) " + str(resultHeight) + "x" + str(resultWidth) + "!")
 
-        resizedImage = image.resize((resultHeight, resultWidth))
+        resizedImage = image.resize((resultWidth, resultHeight))
+
         result = ""
         pixels = resizedImage.load()
+        resultFileName = "result-" + os.path.basename(filePath) + ".txt"
+        file = open("./" + resultFileName, "wb")
 
         for y in range(0, resizedImage.height):
             for x in range(0, resizedImage.width):
@@ -153,16 +156,14 @@ if os.path.exists(filePath):
                     elif resizedImage.height >= 200 or resizedImage.width >= 200:
                         offset = " " * round(resizedImage.height / 2 / 100)
                 print(colorChar + offset, end="")
-                result = result + colorChar + offset
+                if createFile:
+                    file.write((colorChar + offset).encode('utf8'))
             print("")
-            result = result + "\n"
+            if createFile:
+                file.write('\n'.encode('utf8'))
 
-        if createFile:
-            resultFileName = "result-" + os.path.basename(filePath) + ".txt"
-            file = open("./" + resultFileName, "w")
-            file.write(result)
-            file.close()
-            logOK("Saved result to file " + resultFileName + "!")
+        file.close()
+        logOK("Saved result to file " + resultFileName + "!")
     else:
         logFATAL("File " + filePath + " isn't a file!")
 else:
