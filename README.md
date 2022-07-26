@@ -4,7 +4,7 @@ ImgToAscii is a small python-script, with which you can display an image as text
 ### Configuration
 - By default, ImgToAscii creates a file with the result. You can disable it with the argument`--no-file`
 - The default output-location of the output-file is the location of the script. If you want you can change the with the argument   
-`--custom-output-file` followed by the custom output-dir!
+`--custom-output-file=` followed by the custom output-dir!
 
 ### Dependencies
 ImgToAscii requires the following dependencies:
