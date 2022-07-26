@@ -1,4 +1,5 @@
-# ImgToAscii
+![logo](/assets/logo.png)
+
 ImgToAscii is a small python-script, with which you can display an image as text!
 
 ### Configuration
