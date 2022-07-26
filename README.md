@@ -30,7 +30,7 @@ Execute the script:
 ```
 python ImgToAscii.py
 ```
-- First, you must enter the path to the image. 
+- First, you have to enter the path to the image. 
 - Then you can enter the width to resize to or nothing to calculate it from the height.
 - After that you can enter the height to resize to or nothing to calculate it from the width.
 - If you leave both width and height empty, it uses the original width and height.
