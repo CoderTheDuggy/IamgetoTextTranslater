@@ -24,6 +24,11 @@ Clone the repository with the following command:
 ```
 git clone https://github.com/CoderTheDuggy/ImgToAscii.git
 ```
+Change the directory to the script dir:
+```
+cd./ImgToAscii/ImgToAscii
+```
+
 Install all requirements like shown.
 
 Execute the script:
