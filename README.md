@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ### Run it
 Clone the repository with the following command:
 ```
-git clone https://github.com/CoderTheDuggy/ImageToChars.git
+git clone https://github.com/CoderTheDuggy/ImgToAscii.git
 ```
 Install all requirements like shown.
 
