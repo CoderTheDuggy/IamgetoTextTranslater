@@ -71,28 +71,28 @@ def main():
     red = '\033[31m'
     reset = '\033[0m'
 
-    line1 = ' ____________                               _                   ____________    _'
-    line2 = '|_' + background + '             ' + reset + '                          __| ' + background + '  ' + reset + '                | ' + background2 + '             ' + reset + ' | ' + background2 + '  ' + reset
-    line3 = '     | ' + background + '   ' + reset + '                              |_' + background + '        ' + reset + '             | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset
-    line4 = '     | ' + background + '   ' + reset + '      ___________   _______      | ' + background + '  ' + reset + '   _______' + reset + '      | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '____   _______   _ 	      _______'
-    line5 = '     | ' + background + '   ' + reset + '     | ' + background + '            ' + reset + '| ' + background + '        ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '        ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '        ' + reset + '|_' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '____  | ' + background2 + '        ' + reset
-    line6 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + ' _____| ' + background2 + '  ' + reset + '| ' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '____'
-    line7 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '           | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + '| ' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '      |_' + background2 + '        ' + reset
-    line8 = ' ____| ' + background + '   ' + reset + '___  | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    | ' + background2 + '   ' + reset + '________   | ' + background2 + '  ' + reset + '  | ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset + '__| ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset + '       _____| ' + background2 + '  ' + reset
-    line9 = '|_' + background + '             ' + reset + '|_' + background + '  ' + reset + ' |_' + background + '  ' + reset + ' |_' + background + '  ' + reset + '|_' + background + '        ' + reset + '    |_' + background + '  ' + reset + '  |_' + background + '        ' + reset + '    |_' + background2 + '             ' + reset + ' |_' + background2 + '  ' + reset + '  |_' + background2 + '  ' + reset + '|_' + background2 + '        ' + reset + '|_' + background2 + '  ' + reset + '      |_' + background2 + '        ' + reset
+    line1 = ' ____________                               _                   _____________'
+    line2 = '|_' + background + '             ' + reset + '                          __| ' + background + '  ' + reset + '                ' + '| ' + background2 + '              ' + reset
+    line3 = '     | ' + background + '   ' + reset + '                              |_' + background + '        ' + reset + '             ' + '| ' + background2 + '   ' + reset + '      | ' + background2 + '   ' + reset
+    line4 = '     | ' + background + '   ' + reset + '      ___________   _______      | ' + background + '  ' + reset + '   _______' + reset + '      ' + '| ' + background2 + '   ' + reset + '      | ' + background2 + '   ' + reset + ' _______   _______   _   _'
+    line5 = '     | ' + background + '   ' + reset + '     | ' + background + '            ' + reset + '| ' + background + '        ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '        ' + reset + '    ' + '| ' + background2 + '   ' + reset + '______| ' + background2 + '   ' + reset + '| ' + background2 + '        ' + reset + '| ' + background2 + '        ' + reset + '|_' + background2 + '  ' + reset + '|_' + background2 + '  ' + reset
+    line6 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    ' + '| ' + background2 + '              ' + reset + '| ' + background2 + '  ' + reset + '____  | ' + background2 + '  ' + reset + '       _   _'
+    line7 = '     | ' + background + '   ' + reset + '     | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '    ' + '| ' + background2 + '   ' + reset + '      | ' + background2 + '   ' + reset + '|_' + background2 + '        ' + reset + '| ' + background2 + '  ' + reset + '      | ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset
+    line8 = ' ____| ' + background + '   ' + reset + '___  | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + ' | ' + background + '  ' + reset + '| ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    | ' + background + '  ' + reset + '  | ' + background + '  ' + reset + '__| ' + background + '  ' + reset + '    ' + '| ' + background2 + '   ' + reset + '      | ' + background2 + '   ' + reset + ' _____| ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset + '____  | ' + background2 + '  ' + reset + '| ' + background2 + '  ' + reset
+    line9 = '|_' + background + '             ' + reset + '|_' + background + '  ' + reset + ' |_' + background + '  ' + reset + ' |_' + background + '  ' + reset + '|_' + background + '        ' + reset + '    |_' + background + '  ' + reset + '  |_' + background + '        ' + reset + '    ' + '|_' + background2 + '   ' + reset + '      |_' + background2 + '   ' + reset + '|_' + background2 + '        ' + reset + '|_' + background2 + '        ' + reset + '|_' + background2 + '  ' + reset + '|_' + background2 + '  ' + reset
     line10 = '                                   | ' + background + '  ' + reset
     line11 = '                              _____| ' + background + '  ' + reset
     line12 = '                             |_' + background + '        ' + reset
 
     print(
-        line1 + '\n' + line2 + '\n' + line3 + '\n' + line4 + '\n' + line5 + '\n' + line6 + '\n' + line7 + '\n' + line8 + '\n' + line9 + '\n' + line10 + '\n' + line11 + '\n' + line12 + "\n" + " " * 56 + red + "v1.0" + '\n' + " " * 37 + blue + "(C) Georg Kollegger (CoderTheDuggy/TheDuggy)\n" + reset)
+        line1 + '\n' + line2 + '\n' + line3 + '\n' + line4 + '\n' + line5 + '\n' + line6 + '\n' + line7 + '\n' + line8 + '\n' + line9 + '\n' + line10 + '\n' + line11 + '\n' + line12 + '\n' + ' ' * 56 + red + 'v1.0' + '\n' + ' ' * 37 + blue + '(C) Georg Kollegger (CoderTheDuggy/TheDuggy)\n' + reset)
 
     customPath = ''
     createFile = True
     if len(sys.argv) > 1:
-        if sys.argv[1] == "--no-file":
+        if sys.argv[1] == '--no-file':
             createFile = False
-            logWARNING("Save result to file has been disabled with arg --no-file!")
+            logWARNING('Save result to file has been disabled with arg --no-file!')
         elif sys.argv[1].split('=', 1)[0] == '--custom-output-file':
             if os.path.exists(sys.argv[1].split('=', 1)[1]) and os.path.isdir(sys.argv[1].split('=', 1)[1]):
                 customPath = sys.argv[1].split('=', 1)[1] + '/'
@@ -101,16 +101,16 @@ def main():
 
                 logWARNING('Custom output-dir was set to ' + sys.argv[1].split('=', 1)[1] + ' but doesn\'t exist or isn\'t a directory! Using default ./ instead!')
         else:
-            logWARNING("The command line argument " + sys.argv[1] + " is unknown and skipped!" + (
-                "(Along with " + str(len(sys.argv) - 2) + " other argument(s)!" if len(sys.argv) > 3 else ""))
+            logWARNING('The command line argument ' + sys.argv[1] + ' is unknown and skipped!' + (
+                '(Along with ' + str(len(sys.argv) - 2) + ' other argument(s)!' if len(sys.argv) > 3 else ''))
 
     logOK('Please enter the path to your image: ', True)
     filePath = input('')
     if os.path.exists(filePath):
         if os.path.isfile(filePath):
             image = PIL.Image.open(filePath)
-            logOK("Enter width (or nothing/0 to calculate it from height): ", True)
-            width = input("")
+            logOK('Enter width (or nothing/0 to calculate it from height): ', True)
+            width = input('')
             width = width if width else 0
 
             logOK('Enter height (or nothing/0 to calculate it from width): ', True)
@@ -118,10 +118,10 @@ def main():
             height = height if height else 0
 
             if not str(width).isnumeric():
-                logFATAL("The width (" + width + ") is not numeric!", False)
+                logFATAL('The width (' + width + ') is not numeric!', False)
                 exit(0)
             if not str(height).isnumeric():
-                logFATAL("The height (" + height + ") is not numeric!", False)
+                logFATAL('The height (' + height + ') is not numeric!', False)
                 exit(0)
 
             height = int(height)
@@ -145,43 +145,43 @@ def main():
             if offset:
                 if not str(offset).isnumeric():
                     if not offset == 'disabled':
-                        logFATAL("The offset must be numeric!", False)
+                        logFATAL('The offset must be numeric!', False)
                         exit(0)
                 else:
-                    offset = " " * int(offset)
+                    offset = ' ' * int(offset)
 
             resizedImage = image.resize((resultWidth, resultHeight))
 
             if not offset:
                 if 100 <= resizedImage.height <= 200 or 100 <= resizedImage.width <= 200:
-                    offset = " "
+                    offset = ' '
                 elif resizedImage.height > 200 or resizedImage.width > 200:
-                    offset = " " * round(resizedImage.height / 2 / 100)
+                    offset = ' ' * round(resizedImage.height / 2 / 100)
             if offset == 'disabled':
                 offset = ''
 
             pixels = resizedImage.load()
-            resultFileName = "result-" + os.path.basename(filePath) + ".txt"
-            file = open(('./' if customPath == '' else customPath) + resultFileName, "wb")
-            logOK("Creating chars of image " + file.name + 'with height=' + str(resizedImage.height) + ', width=' + str(resizedImage.width) + ' and ' + ('no offset!' if offset == '' else ' offset=' + offset + '!'), False)
+            resultFileName = 'result-' + os.path.basename(filePath) + '.txt'
+            file = open(('./' if customPath == '' else customPath) + resultFileName, 'wb')
+            logOK('Creating chars of image ' + file.name + 'with height=' + str(resizedImage.height) + ', width=' + str(resizedImage.width) + ' and ' + ('no offset!' if offset == '' else ' offset=' + offset + '!'), False)
             for y in range(0, resizedImage.height):
                 for x in range(0, resizedImage.width):
                     rgb = numpy.array(pixels[x, y])
                     rgbAverage = round((rgb[0] + rgb[1] + rgb[2]) / 3)
                     colorChar = getColorChar(rgbAverage)
-                    print(colorChar + offset, end="")
+                    print(colorChar + offset, end='')
                     if createFile:
                         file.write((colorChar + offset).encode('utf8'))
-                print("")
+                print('')
                 if createFile:
                     file.write('\n'.encode('utf8'))
 
             file.close()
-            logOK("Saved result to file " + resultFileName + "!", False)
+            logOK('Saved result to file ' + resultFileName + '!', False)
         else:
-            logFATAL("File " + filePath + " isn't a file!", False)
+            logFATAL('File ' + filePath + ' isn\'t a file!', False)
     else:
-        logFATAL("File " + filePath + " doesn't exist!", False)
+        logFATAL('File ' + filePath + ' doesn\'t exist!', False)
 
 
 colorama.init()
