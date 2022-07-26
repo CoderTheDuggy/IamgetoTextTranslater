@@ -11,7 +11,7 @@ ImgToAscii requires the following dependencies:
 
 - colorama
 - numpy
-- Pillow
+- Pillow  
 You can just install all required dependencies from the requirements.txt file with the following command:
 ```
 pip install -r requirements.txt
